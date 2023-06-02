@@ -1,0 +1,30 @@
+
+    <div class="container">
+        <div class="myCard">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="myLeftCtn"> 
+                        <form class="myForm text-center" #registerForm="ngForm" (ngSubmit)="onSubmite(registerForm)">
+                            <header>Create new account</header>
+                            <div class="form-group">
+                                <!-- <i class="fas fa-user"></i> -->
+                                <input type="text" placeholder="Username" id="username" class="form-control" name="username" required [(ngModel)]="admin.username"> 
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <i class="fas fa-envelope"></i> -->
+                                <input placeholder="Email" type="text" id="email" class="form-control" name="email" required [(ngModel)]="admin.email"> 
+                            </div>
+
+                            <div class="form-group">
+                                <!-- for icons <i class="fas fa-lock"></i> -->
+                                <input type="password" id="password" placeholder="Password" class="form-control" name="password" required [(ngModel)]="admin.password"> 
+                            </div>
+                                <input type="submit" id="cta" class="butt" value="CREATE ACCOUNT" name="create">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    

@@ -1,0 +1,54 @@
+ 
+  /* For New Form code */
+  .container {
+    max-width: 768px;
+border-radius: 25px;
+padding: 8px;
+background: linear-gradient(45deg,#eaffa7,#fccd40,#a7d1ff,#0071fc,#6bfc66,#13ff02);
+padding-bottom: 50px;
+box-shadow: 12px 18px 80px -4px rgba(195, 0, 255, 0.823);
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      margin-top: 50px;
+    }
+  }
+  .myLeftCtn {
+    position: relative;
+    border-radius: 25px;
+    height: 100%;
+    padding: 25px;
+    padding-left: 50px;
+    /* border: 1px solid black; */
+  }
+  .myLeftCtn .form-control {
+    width: 230px;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 50px;
+    border: none;
+    /* x-die,y-die,blur,spread,color ;;;color always at last position */ 
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  }
+  .myLeftCtn .form-control:focus {
+    outline: none;
+  } 
+  .butt {
+    margin-top: 10px;
+    background: linear-gradient(45deg, #4aa2ff, #0071fc);
+    color: #fff;
+    width: 230px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  } 
+  .myLeftCtn .butt:hover {
+    background: linear-gradient(45deg, #6cb3ff, #3e95ff);
+
+  }
+  .myLeftCtn .butt:focus {
+    outline: none;
+  } 
+ 

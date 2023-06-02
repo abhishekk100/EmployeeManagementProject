@@ -1,0 +1,30 @@
+<style>
+    label{
+
+        padding: 8px;
+    }
+    button{
+        margin-top: 14px;
+    }
+</style>
+<div class="col-md-6 offset-md-3">
+
+    <h1>Update Employees</h1>
+    <!-- (ngsubmit) is event for forms -->
+    <form action="addEmployee" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+    <input type="text" class="form-control" id="fname" [(ngModel)]="employees.fname" name="fname">
+</div>
+<div class="form-group">
+    <label for="lastname" >Last Name</label>
+    <input type="text" class="form-control" id="lname" [(ngModel)]="employees.lname" name="lname">
+</div>
+
+<div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="employees.email" name="email">
+</div>
+<button class="btn btn-success" type="submit">Submit</button>
+</form>
+</div>

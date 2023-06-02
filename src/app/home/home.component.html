@@ -1,0 +1,77 @@
+<div class="container" *ngIf="appCom.isLoginSuccess == 0">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="myLeftCtn">
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              #username="ngModel"
+              [(ngModel)]="adminObj.username"
+              minlength="3"
+              maxlength="20"
+              required
+              placeholder="Username"
+            />
+            <div
+              *ngIf="username.invalid && (username.dirty || username.touched)"
+              class="alert"
+            >
+              <div *ngIf="username.errors?.['required']">Name is required.</div>
+              <div *ngIf="username.errors?.['minlength']">
+                Name must be at least 3 characters long.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              [(ngModel)]="adminObj.email"
+              required
+              placeholder="Email"
+            />
+            <div
+              *ngIf="
+                adminObj.email.length > 8 && adminObj.email.indexOf('@') === -1
+              "
+              class="text-danger"
+              style="
+                background-color: aliceblue;
+                border-radius: 8px;
+                text-align: center;
+              "
+            >
+              Invalid email format
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="adminObj.password"
+              required
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="butt">Login</button>
+          <button type="submit" class="butt" (click)="clearAll()">
+            Cancle
+          </button>
+          <button type="button" class="butt" (click)="onCreateAccount()">
+            Create Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

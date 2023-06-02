@@ -1,0 +1,54 @@
+<h1>{{title}}</h1>
+<div *ngIf="isLoginSuccess==0">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <!-- Home Component -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+      </li>
+   
+        <!-- About Component -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="About" routerLinkActive="active">About</a>
+        </li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="isLoginSuccess==1">
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <!-- open employeelist component -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="employees" routerLinkActive="active"
+        >Employee List</a>
+      </li>
+      <!-- open addemployee component -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="addemployees" routerLinkActive="active"
+        >Add Employee</a>
+      </li>
+      <!-- for Logout  -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" routerLinkActive="active" (click)="logout(0)">Logout</a>
+      </li>
+   
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+  <!-- <button routerLink="employees">employeelist</button><br><br><button routerLink="addemployees">addemployee</button> -->
+</div>
+<router-outlet></router-outlet>
+
+<!-- <p class="text-center">app component works</p> -->
+
+<div class="container">
+  <!-- <app-employeelist></app-employeelist> -->
+  <!-- to dynamically load component we use routing directive -->
+</div>
+<footer class="footer">
+  <div class="container">
+    <span>All Right Reserved 2023 to its Owner </span>
+  </div>
+</footer>
